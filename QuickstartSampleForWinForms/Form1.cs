@@ -15,7 +15,7 @@ namespace QuickstartSampleForWinForms
             Map1.MapUnit = GeoUnit.Meter;
             Map1.UseOpenStreetMapAsBaseMap();
 
-            ShapefileLayer shapefileLayer = new ShapefileLayer("../../AppData/countries-900913.shp");
+            ShapefileLayer shapefileLayer = new ShapefileLayer("AppData/countries-900913.shp");
             shapefileLayer.UseRandomStyle(120);
             Map1.AddLayers("Dynamic Layers", shapefileLayer);
 
