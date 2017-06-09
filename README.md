@@ -1,4 +1,4 @@
-# Quickstart Guide for SlimGIS MapKit WinForms
+# Quickstart Guide for WinForms Map Kit
 SlimGIS MapKit for WinForms is a .net WinForms component to help you to easily build up a Map based WinForms application. It contains full function of SlimGIS MapKit Core which comes with Geometry, GeoFunction, Symbology, Renderer, DataSource, Layer etc. In this guide, we are going to focus on the WPF component introduction and create the first application with it.
 
 When you are reading this guide, I assume that you have installed SlimGIS Setup on your machine (if not ready, please visit [this page](http://www.slimgis.com/developers/installation) and make it ready for few steps).
