@@ -60,12 +60,14 @@ Now you could feel free to do the operations below.
 
 ## Add a ShapeFile and set styles
 We prepared a contrys ShapeFile data in Spherical Mercator in the sample. If you are following this guide to create this sample step by step, please copy the *AppData* folder from the project folder to your's. Let's take a look at the code below:
+
 ```csharp
 ShapefileLayer shapefileLayer = new ShapefileLayer("../../AppData/cntry02-900913.shp");
 shapefileLayer.UseRandomStyle(120);
 Map1.AddLayers("Dynamic Layers", shapefileLayer);
 ```
-*Note: `shapefileLayer.UseRandomStyle(120)` means we give it a random style with 120 alpha component for the fill color. So the screenshots below might have different fill color.*  
+
+> Note: `shapefileLayer.UseRandomStyle(120)` means we give it a random style with 120 alpha component for the fill color. So the screenshots below might have different fill color.*  
 
 Now, our map becomes this:
 ![quickstart-guide-winforms-osm-shp](http://i1.piimg.com/567571/d89773ed53fc5346.png)
@@ -79,6 +81,7 @@ In this section, we are going to do some custom interaction with map. Like the n
 1. add a click event on the map. We will add it in XAML like we used to do.  
 ![quickstart-guide-winforms-event-click](http://p1.bqimg.com/567571/02d53464bc295b05.png)  
 2. Implement the event as following.
+
 ```csharp
 private void Map1_MapSingleClick(object sender, SlimGis.MapKit.WinForms.MapMouseEventArgs e)
 {
@@ -105,9 +108,17 @@ private void Map1_MapSingleClick(object sender, SlimGis.MapKit.WinForms.MapMouse
 
     Map1.Overlays["HighlightOverlay"].Refresh();
 }
-
 ```
+
 Done, press `F5` to run your first fantasy map application. It's pretty simple. 
 ![quickstart-guide-winforms-final](http://p1.bqimg.com/567571/c6389a2440961fd8.png)
 
 I'm sure you have more ideas for this guide. Please feel free to create a pull request, we are glad to take suggestions from you. Also, let us know how you think by dev@slimgis.com.
+
+### Related Resources
+
+- [Source code](https://github.com/SlimGIS/QuickstartSampleForWinForms)
+- [Installation guide](http://www.slimgis.com/developers/installation)
+- [WinForms feature samples](https://www.slimgis.com/developers/feature-samples-winforms)
+- [WinForms feature list](https://www.slimgis.com/developers/features-overview-winforms)
+- [WinForms API reference](https://www.slimgis.com/developers/api-ref-winforms)
