@@ -27,7 +27,7 @@ At this step, there are several options to continue:
 2. Reference assembly from installed folder.
 3. Reference package from NuGet.org.
 
-We will go with option one, as it is already installed on your machine at *C:\Program Files (x86)\SlimGIS\SDK\3.0.0\WinForms*. Let's drag *SGMapKit.WinForms.dll* into the toolbox; Visual Studio will automatically detect the custom controls inside this assembly and prepare the controls for you. See the screenshot below.  
+We will go with option one, as it is already installed on your machine at *C:\Program Files (x86)\SlimGIS\3.0.0\SDK\WinForms*. Let's drag *SGMapKit.WinForms.dll* into the toolbox; Visual Studio will automatically detect the custom controls inside this assembly and prepare the controls for you. See the screenshot below.  
 ![quickstart-guide-winforms-toolbox](http://p1.bqimg.com/567571/babbefbe302c04f4.png)  
 MapControl is what we are going to add to the *Form1.cs* design-time. Drag this control into the default *Form1* that is created by WinForms application template and set a proper size. I'd like to make it like following size.
 ![quickstart-guide-winforms-set-a-proper-size](http://p1.bpimg.com/567571/3f3b3dd23d4d099e.png)  
@@ -64,7 +64,7 @@ We prepared a contrys ShapeFile data in Spherical Mercator in the sample. If you
 ```csharp
 ShapefileLayer shapefileLayer = new ShapefileLayer("../../AppData/cntry02-900913.shp");
 shapefileLayer.UseRandomStyle(120);
-Map1.AddLayers("Dynamic Layers", shapefileLayer);
+Map1.AddStaticLayers("Dynamic Layers", shapefileLayer);
 ```
 
 > Note: `shapefileLayer.UseRandomStyle(120)` means we give it a random style with 120 alpha component for the fill color. So the screenshots below might have different fill color.*  
@@ -79,25 +79,24 @@ Working...
 At current step, our map is static map. Although we have build-in mouse interaction etc. But that is not enough for a map control.  
 In this section, we are going to do some custom interaction with map. Like the normal map that allows to identify a feature and highlight it on the map. Here are how we make it true. 
 1. add a click event on the map. We will add it in XAML like we used to do.  
-![quickstart-guide-winforms-event-click](http://p1.bqimg.com/567571/02d53464bc295b05.png)  
+![quickstart-guide-winforms-event-click](https://raw.githubusercontent.com/SlimGIS/QuickstartSampleForWinForms/master/Screenshots/quickstart-guide-winforms-event-click.png)  
 2. Implement the event as following.
 
 ```csharp
-private void Map1_MapSingleClick(object sender, SlimGis.MapKit.WinForms.MapMouseEventArgs e)
+private void Map1_MapClick(object sender, SlimGis.MapKit.WinForms.MapMouseEventArgs e)
 {
     // We added a ShapefileLayer in the Loaded event, 
     // it's default name is the name of the shapefile.
     // so here, we could find the layer back by the shapefile name without extension. 
-    FeatureLayer featureLayer = Map1.FindLayer<FeatureLayer>("cntry02-900913");
-    Feature identifiedFeature = IdentifyHelper.Identify(featureLayer, e.WorldCoordinate, Map1.CurrentScale, Map1.MapUnit)
-        .FirstOrDefault();
+    FeatureLayer featureLayer = Map1.FindLayer<FeatureLayer>("countries-900913");
+    Feature identifiedFeature = IdentifyHelper.Identify(featureLayer, e.WorldCoordinate, Map1.CurrentScale, Map1.MapUnit).FirstOrDefault();
 
     MemoryLayer dynamicLayer = Map1.FindLayer<MemoryLayer>("Highlight Layer");
     if (dynamicLayer == null)
     {
         dynamicLayer = new MemoryLayer { Name = "Highlight Layer" };
         dynamicLayer.UseRandomStyle();
-        Map1.AddLayers("HighlightOverlay", dynamicLayer);
+        Map1.AddStaticLayers("HighlightOverlay", dynamicLayer);
     }
 
     dynamicLayer.Features.Clear();

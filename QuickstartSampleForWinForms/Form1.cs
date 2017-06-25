@@ -17,12 +17,12 @@ namespace QuickstartSampleForWinForms
 
             ShapefileLayer shapefileLayer = new ShapefileLayer("AppData/countries-900913.shp");
             shapefileLayer.UseRandomStyle(120);
-            Map1.AddLayers("Dynamic Layers", shapefileLayer);
+            Map1.AddStaticLayers("Dynamic Layers", shapefileLayer);
 
             Map1.ZoomToFullBound();
         }
 
-        private void Map1_MapSingleClick(object sender, SlimGis.MapKit.WinForms.MapMouseEventArgs e)
+        private void Map1_MapClick(object sender, SlimGis.MapKit.WinForms.MapMouseEventArgs e)
         {
             // We added a ShapefileLayer in the Loaded event, 
             // it's default name is the name of the shapefile.
@@ -35,7 +35,7 @@ namespace QuickstartSampleForWinForms
             {
                 dynamicLayer = new MemoryLayer { Name = "Highlight Layer" };
                 dynamicLayer.UseRandomStyle();
-                Map1.AddLayers("HighlightOverlay", dynamicLayer);
+                Map1.AddStaticLayers("HighlightOverlay", dynamicLayer);
             }
 
             dynamicLayer.Features.Clear();

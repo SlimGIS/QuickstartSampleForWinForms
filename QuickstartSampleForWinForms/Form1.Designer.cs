@@ -44,7 +44,7 @@
             this.Map1.SpatialReference = null;
             this.Map1.TabIndex = 0;
             this.Map1.Text = "mapControl1";
-            this.Map1.MapClick += new System.EventHandler<SlimGis.MapKit.WinForms.MapMouseEventArgs>(this.Map1_MapSingleClick);
+            this.Map1.MapClick += new System.EventHandler<SlimGis.MapKit.WinForms.MapMouseEventArgs>(this.Map1_MapClick);
             // 
             // Form1
             // 
