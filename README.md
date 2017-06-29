@@ -1,7 +1,7 @@
 # Quickstart Guide for WinForms Map Kit
-SlimGIS MapKit for WinForms is a .net WinForms component to help you to easily build up a Map based WinForms application. It contains full function of SlimGIS MapKit Core which comes with Geometry, GeoFunction, Symbology, Renderer, DataSource, Layer etc. In this guide, we are going to focus on the WPF component introduction and create the first application with it.
+SlimGIS Map Kit for WinForms is a .net WinForms component to help you to easily build up a Map based WinForms application. It contains full function of SlimGIS MapKit Core which comes with Geometry, GeoFunction, Symbology, Renderer, DataSource, Layer etc. In this guide, we are going to focus on the WPF component introduction and create the first application with it.
 
-When you are reading this guide, I assume that you have installed SlimGIS Setup on your machine (if not ready, please visit [this page](http://www.slimgis.com/developers/installation) and make it ready for few steps).
+When you are reading this guide, I assume that you have installed SlimGIS Setup on your machine (if not ready, please visit [installation guide](http://www.slimgis.com/documents/installation) and make it ready for few steps).
 
 In this guide, I will introduce the following items:
 
@@ -13,7 +13,7 @@ In this guide, I will introduce the following items:
 2. Add build-in controls: zoom bar, scale bar etc
 1. Identify a feature and highlight it
 
-All right, I think we can stop here. Not too much content. It is only parts of this WinForms component. View [this page](#) for the full feature list.
+All right, I think we can stop here. Not too much content. It is only parts of this WinForms component. View [this page](https://slimgis.com/documents/features-overview-all) for the full feature list.
 
 ## Scenario description
 What a basic map contains? I'm sure everyone has a different vision of it. Let's open the web browser and visit [maps.google.com](https://www.google.com/maps). It is the most popular map currently.  
@@ -117,7 +117,8 @@ I'm sure you have more ideas for this guide. Please feel free to create a pull r
 ### Related Resources
 
 - [Source code](https://github.com/SlimGIS/QuickstartSampleForWinForms)
-- [Installation guide](http://www.slimgis.com/developers/installation)
-- [WinForms feature samples](https://www.slimgis.com/developers/feature-samples-winforms)
-- [WinForms feature list](https://www.slimgis.com/developers/features-overview-winforms)
-- [WinForms API reference](https://www.slimgis.com/developers/api-ref-winforms)
+- [Installation guide](http://www.slimgis.com/documents/installation)
+- [Map Kit WinForms introduction](https://slimgis.com/products/winforms)
+- [WinForms feature samples](https://www.slimgis.com/documents/feature-samples-winforms)
+- [WinForms feature list](https://www.slimgis.com/documents/features-overview-winforms)
+- [WinForms API reference](https://www.slimgis.com/documents/api-ref-winforms)
