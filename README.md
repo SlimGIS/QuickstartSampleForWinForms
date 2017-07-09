@@ -1,5 +1,7 @@
-# Quickstart Guide for WinForms Map Kit
-SlimGIS Map Kit for WinForms is a .net WinForms component to help you to easily build up a Map based WinForms application. It contains full function of SlimGIS MapKit Core which comes with Geometry, GeoFunction, Symbology, Renderer, DataSource, Layer etc. In this guide, we are going to focus on the WPF component introduction and create the first application with it.
+Keywords:   create a Map from scratch, quickstart, tutorial, the beginners guide
+
+# Getting Started Guide for WinForms Map Kit
+SlimGIS Map Kit for WinForms is a .net WinForms component to help you to easily build up a Map based WinForms application. It contains full function of SlimGIS MapKit Core which comes with Geometry, GeoFunction, Symbology, Renderer, DataSource, Layer etc. This is the beginner guide that focus on the WPF component introduction and create the first application with it.
 
 When you are reading this guide, I assume that you have installed SlimGIS Setup on your machine (if not ready, please visit [installation guide](http://www.slimgis.com/documents/installation) and make it ready for few steps).
 
