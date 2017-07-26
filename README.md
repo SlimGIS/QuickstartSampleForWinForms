@@ -8,12 +8,12 @@ When you are reading this guide, I assume that you have installed SlimGIS Setup 
 In this guide, I will introduce the following items:
 
 1. Scenario description
-1. Add assembly references and init the map control
-1. Add OpenStreetMap as base map
-1. Build-in Mouse operation
-1. Add a Shapefile and set styles
-2. Add build-in controls: zoom bar, scale bar etc
-1. Identify a feature and highlight it
+2. Add assembly references and init the map control
+3. Add OpenStreetMap as base map
+4. Build-in Mouse operation
+5. Add a Shapefile and set styles
+6. Add build-in controls: zoom bar, scale bar etc
+7. Identify a feature and highlight it
 
 All right, I think we can stop here. Not too much content. It is only parts of this WinForms component. View [this page](https://slimgis.com/documents/features-overview-all) for the full feature list.
 
@@ -23,7 +23,7 @@ What a basic map contains? I'm sure everyone has a different vision of it. Let's
 A basic map application usually contains a map of course; a serial buttons to controll the map viewport (In the screenshot above, it adorns on the bottom right corner, see the little "+" and "-" button). A scale bar belows the buttons on the right of the very bottom. We can add more controls to make it convenient to use. Like displaying current mouse coordinate. This is what all for a common maps have. That's not all for this guide. You know everyone loves Google Maps, but compare with a component, we can do more as we like. In the following part, we will load our own Shapefile, set a nice style and put a lable on it; then interact with it. Isn't it cool? Let's get start.
 
 ## Add assembly references and init the map control
-To start the demo, every developers know how to create a project with Visual Studio. In this guide, I will use Visual Studio 2015 Community version. Here are few steps, I will try to make it simple. Open VS2015 -> Create a WPF Application and name it `QuickstartSampleForWpf`.  
+To start the demo, every developers know how to create a project with Visual Studio. In this guide, I will use Visual Studio 2015 Community version. Here are few steps, I will try to make it simple. Open VS2015 -> Create a Winforms Application and name it `QuickstartSampleForWpf`.  
 At this step, there are several options to continue:
 1. Drag the map component from *ToolBox* in Visual Studio.
 2. Reference assembly from installed folder.
